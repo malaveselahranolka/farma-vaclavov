@@ -23,6 +23,7 @@
 }
 
 html {
+  font-variant-numeric: lining-nums;
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -615,7 +616,7 @@ html:not(.js) .site-nav {
 }
 
 .registr__cell--ico .registr__value {
-  font-variant-numeric: tabular-nums;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 @media (max-width: 900px) {
