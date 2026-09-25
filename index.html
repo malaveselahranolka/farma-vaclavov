@@ -11,25 +11,32 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Farma Dolní Václavov | Ing. Štěpánka Jurinová, Václavov u Bruntálu">
   <meta property="og:description" content="Rodinná farma ve Václavově u Bruntálu. Pastevní chov masného simentála a pěstování obilovin v režimu ekologického zemědělství od roku 2015.">
-  <meta property="og:image" content="img/pastva-zapad-slunce.jpg">
+  <meta property="og:image" content="https://www.farma-vaclavov.cz/img/pastva-zapad-slunce.jpg">
+  <meta property="og:url" content="https://www.farma-vaclavov.cz/">
   <meta property="og:type" content="website">
 
-  <link rel="icon" href="data:,">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/img/logo/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="canonical" href="https://www.farma-vaclavov.cz/">
 
   <!-- Google Fonts -->
-  <link rel="preload" as="image" href="img/pastva-zapad-slunce@2x.webp" imagesrcset="img/pastva-zapad-slunce.webp 1000w, img/pastva-zapad-slunce@2x.webp 2400w" imagesizes="100vw" fetchpriority="high">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Zilla+Slab:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="img/pastva-zapad-slunce-1600.webp" imagesrcset="img/pastva-zapad-slunce-640.webp 640w, img/pastva-zapad-slunce.webp 1000w, img/pastva-zapad-slunce-1600.webp 1600w, img/pastva-zapad-slunce@2x.webp 2400w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/zilla-slab-latin-700-normal.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/zilla-slab-latin-ext-700-normal.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/figtree-latin-400-normal.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="fonts/figtree-latin-ext-400-normal.woff2" crossorigin>
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
 
   <!-- No-JS detection -->
   <script>document.documentElement.classList.add('js');</script>
 
   <!-- Script -->
-  <script src="main.js?v=14" defer></script>
+  <script src="main.js?v=15" defer></script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -37,6 +44,9 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Farma Dolní Václavov",
+    "url": "https://www.farma-vaclavov.cz/",
+    "logo": "https://www.farma-vaclavov.cz/img/logo/logo-600.png",
+    "image": "https://www.farma-vaclavov.cz/img/pastva-zapad-slunce.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Dolní Václavov 65",
@@ -98,7 +108,7 @@
   <main id="obsah">
     <!-- Hero Section -->
     <section id="top" class="hero">
-      <img src="img/pastva-zapad-slunce@2x.webp" srcset="img/pastva-zapad-slunce.webp 1000w, img/pastva-zapad-slunce@2x.webp 2400w" sizes="100vw" alt="Stádo masného simentála na pastvině při západu slunce" width="1000" height="750" fetchpriority="high" class="hero__image">
+      <img src="img/pastva-zapad-slunce-1600.webp" srcset="img/pastva-zapad-slunce-640.webp 640w, img/pastva-zapad-slunce.webp 1000w, img/pastva-zapad-slunce-1600.webp 1600w, img/pastva-zapad-slunce@2x.webp 2400w" sizes="100vw" alt="Stádo masného simentála na pastvině při západu slunce" width="1000" height="750" fetchpriority="high" class="hero__image">
       <div class="container hero__container">
         <div class="hero__content">
           <p class="hero__eyebrow">Václavov u&nbsp;Bruntálu</p>
@@ -146,7 +156,7 @@
             <p>Od roku 2015 hospodaříme v&nbsp;režimu ekologického zemědělství. Obhospodařujeme louky, pastviny a&nbsp;pole v&nbsp;okolí obce Václavov u&nbsp;Bruntálu, v&nbsp;krajině podhůří Jeseníků, která pastevnímu chovu skotu přirozeně odpovídá.</p>
           </div>
           <figure class="o-farme__figure reveal">
-            <img src="img/farma-krajina.webp" alt="Budovy farmy a pastviny v okolí Václavova" width="1000" height="750" loading="lazy" decoding="async">
+            <img src="img/farma-krajina.webp" srcset="img/farma-krajina-640.webp 640w, img/farma-krajina.webp 1000w" sizes="(min-width: 1264px) 536px, (min-width: 901px) 44vw, calc(100vw - 40px)" alt="Budovy farmy a pastviny v okolí Václavova" width="1000" height="750" loading="lazy" decoding="async">
             <figcaption class="o-farme__figcaption">Farma a&nbsp;okolní pastviny u&nbsp;Václavova</figcaption>
           </figure>
         </div>
@@ -158,7 +168,7 @@
       <div class="container">
         <div class="chov__grid">
           <figure class="chov__figure reveal">
-            <img src="img/krava-lezici.webp" alt="Kráva plemene masný simentál ležící na pastvině" width="1000" height="750" loading="lazy" decoding="async">
+            <img src="img/krava-lezici.webp" srcset="img/krava-lezici-640.webp 640w, img/krava-lezici.webp 1000w" sizes="(min-width: 1264px) 536px, (min-width: 901px) 44vw, calc(100vw - 40px)" alt="Kráva plemene masný simentál ležící na pastvině" width="1000" height="750" loading="lazy" decoding="async">
           </figure>
           <div class="chov__content reveal">
             <h2>Masný simentál na pastvě</h2>
@@ -206,8 +216,8 @@
           <p>Na orné půdě pěstujeme především obiloviny na zrno. Rostlinnou výrobu doplňuje pěstování dalších netrvalých plodin a&nbsp;podpůrné činnosti po sklizni.</p>
         </div>
         <div class="rostlinna-vyroba__gallery reveal">
-          <img src="img/zne-kombajn.webp" alt="Sklizeň obilí kombajnem na poli u Václavova" width="1000" height="750" loading="lazy" decoding="async" class="gallery-img-1">
-          <img src="img/traktor.webp" alt="Traktor New Holland před stájí farmy" width="1000" height="750" loading="lazy" decoding="async" class="gallery-img-2">
+          <img src="img/zne-kombajn.webp" srcset="img/zne-kombajn-640.webp 640w, img/zne-kombajn.webp 1000w" sizes="(min-width: 1264px) 660px, (min-width: 901px) 55vw, (min-width: 561px) 50vw, calc(100vw - 40px)" alt="Sklizeň obilí kombajnem na poli u Václavova" width="1000" height="750" loading="lazy" decoding="async" class="gallery-img-1">
+          <img src="img/traktor.webp" srcset="img/traktor-640.webp 640w, img/traktor.webp 1000w" sizes="(min-width: 1264px) 470px, (min-width: 901px) 40vw, (min-width: 561px) 50vw, calc(100vw - 40px)" alt="Traktor New Holland před stájí farmy" width="1000" height="750" loading="lazy" decoding="async" class="gallery-img-2">
         </div>
         <ul class="tile-grid tile-grid--activities reveal" role="list">
           <li class="tile">
@@ -326,7 +336,7 @@
         <figure class="photo-frame reveal">
           <div class="photo-frame__window">
             <div class="photo-frame__media">
-              <img class="photo-frame__img" src="img/krava-zapad-slunce@2x.webp" srcset="img/krava-zapad-slunce.webp 1000w, img/krava-zapad-slunce@2x.webp 2400w" sizes="(min-width: 1264px) 1200px, 100vw" alt="Kráva masného simentála na pastvině u&nbsp;Dolního Václavova při západu slunce" width="1000" height="750" loading="lazy" decoding="async">
+              <img class="photo-frame__img" src="img/krava-zapad-slunce-1600.webp" srcset="img/krava-zapad-slunce-640.webp 640w, img/krava-zapad-slunce.webp 1000w, img/krava-zapad-slunce-1600.webp 1600w, img/krava-zapad-slunce@2x.webp 2400w" sizes="(min-width: 1264px) 1136px, calc(100vw - 40px)" alt="Kráva masného simentála na pastvině u&nbsp;Dolního Václavova při západu slunce" width="1000" height="750" loading="lazy" decoding="async">
             </div>
           </div>
         </figure>
