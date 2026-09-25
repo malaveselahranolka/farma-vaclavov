@@ -41,7 +41,6 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background-color: var(--bg);
-  overflow-x: hidden;
 }
 
 img {
@@ -933,13 +932,14 @@ html:not(.js) .nav-contact {
     gap: 40px;
   }
 
+  /* Fotka až pod textem, ať nenavazuje přímo na fotku z O farmě */
   .chov__figure {
-    order: 1;
+    order: 2;
     width: 100%;
   }
 
   .chov__content {
-    order: 2;
+    order: 1;
     width: 100%;
   }
 }
@@ -1383,6 +1383,8 @@ html:not(.js) .nav-contact {
 }
 
 .contact-card {
+  position: sticky;
+  top: 104px;
   background-color: var(--surface);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-card);
@@ -1396,6 +1398,7 @@ html:not(.js) .nav-contact {
   }
 
   .contact-card {
+    position: static;
     padding: 24px;
   }
 }
