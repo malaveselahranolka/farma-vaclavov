@@ -1028,13 +1028,33 @@ html:not(.js) .nav-contact {
   }
 }
 
-/* Fotka na konci Kontaktu, těsně před patičkou */
+/* Fotka na konci Kontaktu, těsně před patičkou; menší mezera mezi Obilovinami a Kontaktem */
+.section.rostlinna-vyroba {
+  padding-bottom: 64px;
+}
+
 .section.kontakt {
+  padding-top: 64px;
   padding-bottom: 80px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  .section.rostlinna-vyroba {
+    padding-bottom: 48px;
+  }
+
   .section.kontakt {
+    padding-top: 48px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section.rostlinna-vyroba {
+    padding-bottom: 40px;
+  }
+
+  .section.kontakt {
+    padding-top: 40px;
     padding-bottom: 48px;
   }
 }
