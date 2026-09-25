@@ -23,6 +23,7 @@
 }
 
 html {
+  overflow-x: clip;
   font-variant-numeric: lining-nums;
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
@@ -695,19 +696,19 @@ html:not(.js) .nav-contact {
     margin-bottom: 28px;
   }
 
-  /* Mobil: text nahoře, spodní polovina fotky (stádo) zůstává volná */
+  /* Mobil: fotka přes celou výšku, text u spodního okraje */
   .hero {
     min-height: max(600px, 100svh);
-    align-items: flex-start;
   }
 
   .hero::after {
-    background: linear-gradient(to bottom, rgba(20, 26, 18, 0.66) 0%, rgba(20, 26, 18, 0.5) 40%, rgba(20, 26, 18, 0.14) 62%, rgba(20, 26, 18, 0) 76%, rgba(20, 26, 18, 0.3) 100%);
+    background:
+      linear-gradient(to bottom, rgba(20, 26, 18, 0.4) 0%, rgba(20, 26, 18, 0) 16%),
+      linear-gradient(to top, rgba(20, 26, 18, 0.86) 0%, rgba(20, 26, 18, 0.62) 34%, rgba(20, 26, 18, 0.12) 58%, rgba(20, 26, 18, 0) 70%);
   }
 
   .hero__content {
-    padding-top: 100px;
-    padding-bottom: 0;
+    padding-bottom: 92px;
   }
 
   .hero__actions .btn {
