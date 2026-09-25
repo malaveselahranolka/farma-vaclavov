@@ -9,3 +9,5 @@ Static one-page site (index.html, styles.css, main.js). No build.
 - Czech copy: single-letter prepositions/conjunctions (v, a, s, k, u, o, z, i) are followed by `&nbsp;`.
 - Deploy (production): Vercel project `farma-dolni-vaclavov` (team adamekfilip12-3803s-projects), domain farma-vaclavov.cz (+www). NOT git-linked: deploy with `npx vercel deploy --prod --yes --scope adamekfilip12-3803s-projects`. GitHub Pages (malaveselahranolka/farma-vaclavov) still mirrors main as an old draft URL.
 - Cache: Pages sends max-age=600. Bump `?v=N` on styles.css/main.js in index.html on every CSS/JS change, else clients see stale styles.
+- Logo/favicons: emblem path lives in `img/logo/symbols.json`; favicon.svg/.ico, apple-touch-icon.png, img/logo/*.png were generated from it with sharp. Fonts are self-hosted in `fonts/` (@fontsource woff2, latin + latin-ext), no Google Fonts.
+- Images: every photo has `-640.webp` + 1000px `.webp` (+ `-1600`/`@2x` for hero and sunset cow); keep srcset/sizes in sync when swapping photos.
