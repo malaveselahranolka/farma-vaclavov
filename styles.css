@@ -769,10 +769,6 @@ html:not(.js) .nav-contact {
   color: var(--white);
 }
 
-.registr__cell--ico .registr__value {
-  font-variant-numeric: lining-nums tabular-nums;
-}
-
 @media (max-width: 900px) {
   .registr__card {
     margin-top: -56px;
@@ -1225,9 +1221,18 @@ html:not(.js) .nav-contact {
   transform: scale(0.98);
 }
 
+/* Telefon a e-mail: oranžové a podtržené, ať je jasné, že se na ně dá kliknout */
+.tile--link .tile__value {
+  color: var(--rust);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .tile--link:hover .tile__value {
-    color: var(--rust);
+    color: var(--rust-hover);
+    text-decoration-thickness: 2px;
   }
 }
 

@@ -8,3 +8,4 @@ Static one-page site (index.html, styles.css, main.js). No build.
 - Contact form: `ENDPOINT` in `main.js` is empty → falls back to mailto. Fill in a form service URL to send directly.
 - Czech copy: single-letter prepositions/conjunctions (v, a, s, k, u, o, z, i) are followed by `&nbsp;`.
 - Deploy: GitHub Pages from `main` (repo malaveselahranolka/farma-vaclavov), push = redeploy. `noindex` meta in index.html is for the draft only; remove at launch on the real domain.
+- Cache: Pages sends max-age=600. Bump `?v=N` on styles.css/main.js in index.html on every CSS/JS change, else clients see stale styles.
