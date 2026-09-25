@@ -973,20 +973,20 @@ html:not(.js) .nav-contact {
   }
 }
 
-/* Fotka v rámečku na konci Rostlinné výroby (bílý rámeček jako dlaždice, jemný parallax) */
+/* Fotka v zeleném rámečku na konci Rostlinné výroby (jemný parallax) */
 .photo-frame {
   margin: 56px 0 0;
-  padding: 10px;
-  background-color: var(--white);
-  border-radius: var(--radius-md);
-  box-shadow: 0 1px 2px rgba(31, 42, 28, 0.05), 0 8px 24px -14px rgba(31, 42, 28, 0.18);
+  padding: 16px;
+  background-color: var(--logo-green);
+  border-radius: calc(var(--radius-md) + 4px);
+  box-shadow: 0 1px 2px rgba(31, 42, 28, 0.08), 0 14px 32px -16px rgba(31, 42, 28, 0.45);
 }
 
 .photo-frame__window {
   position: relative;
   height: clamp(220px, 26vw, 320px);
   overflow: clip;
-  border-radius: calc(var(--radius-md) - 4px);
+  border-radius: var(--radius-sm);
   background-color: var(--spruce-900);
 }
 
@@ -1006,14 +1006,6 @@ html:not(.js) .nav-contact {
   object-position: 50% 66%;
 }
 
-.photo-frame__caption {
-  padding: 12px 6px 4px;
-  font-family: "Figtree", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--ink-muted);
-}
-
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .photo-frame__media {
@@ -1021,6 +1013,27 @@ html:not(.js) .nav-contact {
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
     }
+  }
+}
+
+/* Menší mezera mezi fotkou a Kontaktem */
+.section.rostlinna-vyroba {
+  padding-bottom: 0;
+}
+
+.section.kontakt {
+  padding-top: 96px;
+}
+
+@media (max-width: 900px) {
+  .section.kontakt {
+    padding-top: 72px;
+  }
+}
+
+@media (max-width: 640px) {
+  .section.kontakt {
+    padding-top: 56px;
   }
 }
 
@@ -1036,7 +1049,7 @@ html:not(.js) .nav-contact {
 @media (max-width: 640px) {
   .photo-frame {
     margin-top: 40px;
-    padding: 8px;
+    padding: 10px;
   }
 
   .photo-frame__window {
