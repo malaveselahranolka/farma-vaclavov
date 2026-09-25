@@ -973,63 +973,74 @@ html:not(.js) .nav-contact {
   }
 }
 
-/* Fotografický pás mezi Rostlinnou výrobou a Kontaktem */
-.photo-band {
-  margin: 0;
+/* Fotka v rámečku na konci Rostlinné výroby (bílý rámeček jako dlaždice, jemný parallax) */
+.photo-frame {
+  margin: 56px 0 0;
+  padding: 10px;
+  background-color: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 1px 2px rgba(31, 42, 28, 0.05), 0 8px 24px -14px rgba(31, 42, 28, 0.18);
+}
+
+.photo-frame__window {
   position: relative;
+  height: clamp(220px, 26vw, 320px);
   overflow: clip;
-  height: clamp(220px, 24vw, 340px);
-  background: var(--spruce-900);
+  border-radius: calc(var(--radius-md) - 4px);
+  background-color: var(--spruce-900);
 }
 
-@media (max-width: 640px) {
-  .photo-band {
-    height: 200px;
-  }
-}
-
-.photo-band__media {
+.photo-frame__media {
   position: absolute;
   left: 0;
   right: 0;
-  top: -30%;
-  height: 160%;
+  top: -25%;
+  height: 150%;
 }
 
-.photo-band__img {
+.photo-frame__img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 68%;
+  object-position: 50% 66%;
 }
 
-.photo-band::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background: linear-gradient(180deg, rgba(31, 42, 28, 0.42) 0%, rgba(47, 72, 42, 0.1) 35%, rgba(47, 72, 42, 0.1) 65%, rgba(31, 42, 28, 0.42) 100%), rgba(47, 72, 42, 0.08);
-  box-shadow: inset 0 3px 0 rgba(216, 192, 140, 0.55), inset 0 -3px 0 rgba(216, 192, 140, 0.55);
+.photo-frame__caption {
+  padding: 12px 6px 4px;
+  font-family: "Figtree", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-muted);
 }
 
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .photo-band__media {
-      animation: photo-band-parallax linear both;
+    .photo-frame__media {
+      animation: photo-frame-parallax linear both;
       animation-timeline: view();
       animation-range: cover 0% cover 100%;
     }
   }
 }
 
-@keyframes photo-band-parallax {
+@keyframes photo-frame-parallax {
   from {
-    transform: translate3d(0, -12%, 0);
+    transform: translate3d(0, -8%, 0);
   }
   to {
-    transform: translate3d(0, 12%, 0);
+    transform: translate3d(0, 8%, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .photo-frame {
+    margin-top: 40px;
+    padding: 8px;
+  }
+
+  .photo-frame__window {
+    height: 220px;
   }
 }
 
