@@ -13,17 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Header solid state on scroll via IntersectionObserver
-  const sentinel = document.querySelector('.hero-sentinel');
+  const sentinel = document.querySelector('.scroll-sentinel');
   const siteHeader = document.querySelector('.site-header');
 
   if (sentinel && siteHeader && 'IntersectionObserver' in window) {
     const headerObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        // Sentinel passes above viewport top: hero has scrolled past threshold
-        if (!entry.isIntersecting && entry.boundingClientRect.top < 0) {
+        if (!entry.isIntersecting) {
           siteHeader.classList.add('is-solid');
         } else {
-          siteHeader.classList.remove('is-solid');
+          if (!siteHeader.classList.contains('is-menu-open')) {
+            siteHeader.classList.remove('is-solid');
+          }
         }
       });
     }, {
@@ -38,16 +39,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const siteNav = document.getElementById('site-nav');
 
   if (menuToggle && siteNav && siteHeader) {
+    const updateHeaderSolidState = () => {
+      if (sentinel) {
+        const rect = sentinel.getBoundingClientRect();
+        if (rect.bottom <= 0 || window.scrollY > 8) {
+          siteHeader.classList.add('is-solid');
+        } else {
+          siteHeader.classList.remove('is-solid');
+        }
+      }
+    };
+
     const openMenu = () => {
       menuToggle.setAttribute('aria-expanded', 'true');
+      menuToggle.setAttribute('aria-label', 'Zavřít menu');
       siteNav.classList.add('is-open');
       siteHeader.classList.add('is-menu-open');
+      siteHeader.classList.add('is-solid');
+      document.documentElement.style.overflow = 'hidden';
+
+      const firstLink = siteNav.querySelector('.nav-link');
+      if (firstLink) {
+        firstLink.focus();
+      }
     };
 
     const closeMenu = (returnFocus = true) => {
       menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Otevřít menu');
       siteNav.classList.remove('is-open');
       siteHeader.classList.remove('is-menu-open');
+      document.documentElement.style.overflow = '';
+      updateHeaderSolidState();
+
       if (returnFocus) {
         menuToggle.focus();
       }
@@ -63,8 +87,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      if (!isOpen) return;
+
+      if (e.key === 'Escape') {
+        e.preventDefault();
         closeMenu(true);
+        return;
+      }
+
+      if (e.key === 'Tab') {
+        const focusableElements = Array.from(
+          siteHeader.querySelectorAll('a[href], button:not([disabled])')
+        ).filter((el) => {
+          return el.offsetParent !== null || window.getComputedStyle(el).display !== 'none';
+        });
+
+        if (focusableElements.length === 0) return;
+
+        const firstEl = focusableElements[0];
+        const lastEl = focusableElements[focusableElements.length - 1];
+
+        if (e.shiftKey) {
+          if (document.activeElement === firstEl) {
+            e.preventDefault();
+            lastEl.focus();
+          }
+        } else {
+          if (document.activeElement === lastEl) {
+            e.preventDefault();
+            firstEl.focus();
+          }
+        }
       }
     });
 

@@ -53,6 +53,7 @@
 <body>
   <!-- Skip Link -->
   <a href="#obsah" class="skip-link">Přeskočit na obsah</a>
+  <div class="scroll-sentinel" aria-hidden="true"></div>
 
   <!-- Header -->
   <header class="site-header">
@@ -62,8 +63,7 @@
         <span class="wordmark__subtitle">Ing. Štěpánka Jurinová</span>
       </a>
 
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav">
-        <span class="menu-toggle__text">Menu</span>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Otevřít menu">
         <span class="menu-toggle__icon" aria-hidden="true">
           <span class="menu-toggle__bar"></span>
           <span class="menu-toggle__bar"></span>
@@ -77,6 +77,12 @@
           <li class="nav-item"><a href="#rostlinna-vyroba" class="nav-link">Rostlinná výroba</a></li>
           <li class="nav-item"><a href="#kontakt" class="nav-link">Kontakt</a></li>
         </ul>
+        <div class="nav-contact">
+          <div class="nav-contact__actions">
+            <a href="tel:+420724273266" class="btn btn--primary nav-contact__btn">Zavolat 724 273 266</a>
+            <a href="mailto:s.sajnarova@seznam.cz" class="btn nav-contact__btn nav-contact__btn--outline">Napsat e-mail</a>
+          </div>
+        </div>
       </nav>
     </div>
   </header>
@@ -97,7 +103,6 @@
           </div>
         </div>
       </div>
-      <div class="hero-sentinel" aria-hidden="true"></div>
     </section>
 
     <!-- Registr Card -->
@@ -105,16 +110,16 @@
       <div class="container registr__container">
         <div class="registr__card reveal">
           <div class="registr__cell">
-            <span class="registr__label">Režim</span>
-            <span class="registr__value">Ekologické zemědělství od roku 2015</span>
+            <span class="registr__label">Ekologické zemědělství</span>
+            <span class="registr__value">Od roku 2015</span>
           </div>
           <div class="registr__cell">
-            <span class="registr__label">Chov</span>
-            <span class="registr__value">Masný simentál, pastevní chov</span>
+            <span class="registr__label">Pastevní chov</span>
+            <span class="registr__value">Masný simentál</span>
           </div>
           <div class="registr__cell">
             <span class="registr__label">Rostlinná výroba</span>
-            <span class="registr__value">Obiloviny na zrno</span>
+            <span class="registr__value">Obiloviny na&nbsp;zrno</span>
           </div>
           <div class="registr__cell registr__cell--ico">
             <span class="registr__label">IČO</span>
@@ -178,7 +183,7 @@
           <h2>Obiloviny z&nbsp;vlastních polí</h2>
           <p>Na orné půdě pěstujeme především obiloviny na zrno. Rostlinnou výrobu doplňuje pěstování dalších netrvalých plodin, množení rostlin a&nbsp;podpůrné činnosti po sklizni.</p>
         </div>
-        <div class="rostlinna-vyroba__gallery reveal">
+        <div class="rostlinna-vyroba__gallery reveal" tabindex="0" role="region" aria-label="Fotografie z rostlinné výroby">
           <img src="img/zne-kombajn.webp" alt="Sklizeň obilí kombajnem na poli u Václavova" width="1000" height="750" loading="lazy" decoding="async" class="gallery-img-1">
           <img src="img/traktor.webp" alt="Traktor New Holland před stájí farmy" width="1000" height="750" loading="lazy" decoding="async" class="gallery-img-2">
         </div>
@@ -274,7 +279,11 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-container">
-      <p class="footer-info">Ing. Štěpánka Jurinová, Dolní Václavov 65, 792 01 Václavov u&nbsp;Bruntálu, IČO 01864203</p>
+      <p class="footer-info">
+        <span class="footer-line">Ing. Štěpánka Jurinová</span><span class="footer-sep">, </span>
+        <span class="footer-line">Dolní Václavov 65, 792 01 Václavov u&nbsp;Bruntálu</span><span class="footer-sep">, </span>
+        <span class="footer-line">IČO 01864203</span>
+      </p>
       <p class="footer-copyright">© <span id="current-year">2026</span> Farma Václavov</p>
     </div>
   </footer>
