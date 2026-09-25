@@ -198,7 +198,7 @@
           <h2>Obiloviny z&nbsp;vlastních polí</h2>
           <p>Na orné půdě pěstujeme především obiloviny na zrno. Rostlinnou výrobu doplňuje pěstování dalších netrvalých plodin, množení rostlin a&nbsp;podpůrné činnosti po sklizni.</p>
         </div>
-        <div class="rostlinna-vyroba__gallery reveal" tabindex="0" role="region" aria-label="Fotografie z rostlinné výroby">
+        <div class="rostlinna-vyroba__gallery reveal">
           <img src="img/zne-kombajn.webp" alt="Sklizeň obilí kombajnem na poli u Václavova" width="1000" height="750" loading="lazy" decoding="async" class="gallery-img-1">
           <img src="img/traktor.webp" alt="Traktor New Holland před stájí farmy" width="1000" height="750" loading="lazy" decoding="async" class="gallery-img-2">
         </div>
@@ -245,27 +245,50 @@
             <address class="contact-address">
               <div class="contact-name">Ing. Štěpánka Jurinová</div>
               <div class="contact-role">Zemědělský podnikatel v&nbsp;režimu EKO od roku 2015</div>
-              <dl class="data-list">
-                <div class="data-row">
-                  <dt>Telefon</dt>
-                  <dd><a href="tel:+420724273266">724 273 266</a></dd>
-                </div>
-                <div class="data-row">
-                  <dt>E-mail</dt>
-                  <dd><a href="mailto:s.sajnarova@seznam.cz">s.sajnarova@seznam.cz</a></dd>
-                </div>
-                <div class="data-row">
-                  <dt>Adresa</dt>
-                  <dd>Dolní Václavov 65<br>792 01 Václavov u&nbsp;Bruntálu</dd>
-                </div>
-                <div class="data-row">
-                  <dt>IČO</dt>
-                  <dd>01864203</dd>
-                </div>
-              </dl>
-              <div class="contact-map-link">
-                <a href="https://mapy.cz/zakladni?q=Doln%C3%AD%20V%C3%A1clavov%2065%2C%20V%C3%A1clavov%20u%20Brunt%C3%A1lu" target="_blank" rel="noopener">Zobrazit na Mapy.cz</a>
-              </div>
+              <ul class="tile-grid tile-grid--contact reveal" role="list">
+                <li class="tile-grid__item">
+                  <a class="tile tile--link" href="tel:+420724273266">
+                    <span class="tile__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+                    </span>
+                    <div class="tile__body"><p class="tile__label">Telefon</p><p class="tile__value">724 273 266</p></div>
+                  </a>
+                </li>
+                <li class="tile-grid__item">
+                  <div class="tile">
+                    <span class="tile__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M200,112a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h40A8,8,0,0,1,200,112Zm-8,24H152a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm40-80V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM216,200V56H40V200H216Zm-80.26-34a8,8,0,1,1-15.5,4c-2.63-10.26-13.06-18-24.25-18s-21.61,7.74-24.25,18a8,8,0,1,1-15.5-4,39.84,39.84,0,0,1,17.19-23.34,32,32,0,1,1,45.12,0A39.76,39.76,0,0,1,135.75,166ZM96,136a16,16,0,1,0-16-16A16,16,0,0,0,96,136Z"/></svg>
+                    </span>
+                    <div class="tile__body"><p class="tile__label">IČO</p><p class="tile__value">01864203</p></div>
+                  </div>
+                </li>
+                <li class="tile-grid__item tile-grid__item--wide">
+                  <a class="tile tile--link tile--row" href="mailto:s.sajnarova@seznam.cz">
+                    <span class="tile__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+                    </span>
+                    <div class="tile__body"><p class="tile__label">E-mail</p><p class="tile__value">s.sajnarova@seznam.cz</p></div>
+                  </a>
+                </li>
+                <li class="tile-grid__item tile-grid__item--wide">
+                  <a class="map-card" href="https://mapy.cz/zakladni?q=Doln%C3%AD%20V%C3%A1clavov%2065&amp;x=17.3846863&amp;y=49.9712624&amp;z=16" target="_blank" rel="noopener" aria-label="Dolní Václavov 65, 792 01 Václavov u&nbsp;Bruntálu. Otevřít v&nbsp;Mapy.cz (nové okno)">
+                    <span class="map-card__media">
+                      <img src="img/mapa.webp" alt="" width="800" height="600" loading="lazy" decoding="async">
+                      <span class="map-card__pin">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="40" height="40" fill="currentColor" aria-hidden="true" focusable="false"><path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.17,83.41,134.55a8,8,0,0,0,9.18,0C136,236.17,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z"/></svg>
+                      </span>
+                      <span class="map-card__credit">© OpenStreetMap</span>
+                    </span>
+                    <span class="map-card__body">
+                      <span class="map-card__text">
+                        <span class="tile__label">Adresa</span>
+                        <span class="map-card__address">Dolní Václavov 65<br>792 01 Václavov u&nbsp;Bruntálu</span>
+                      </span>
+                      <span class="map-card__cta">Otevřít v&nbsp;Mapy.cz <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></svg></span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </address>
           </div>
           <div class="contact-card reveal">
