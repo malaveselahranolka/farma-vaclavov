@@ -22,13 +22,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Zilla+Slab:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 
   <!-- No-JS detection -->
   <script>document.documentElement.classList.add('js');</script>
 
   <!-- Script -->
-  <script src="main.js?v=6" defer></script>
+  <script src="main.js?v=7" defer></script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -235,8 +235,10 @@
     </section>
 
     <!-- Kontakt -->
-    <figure class="photo-band">
-      <img src="img/krava-zapad-slunce@2x.webp" srcset="img/krava-zapad-slunce.webp 1000w, img/krava-zapad-slunce@2x.webp 2400w" sizes="100vw" alt="Kráva masného simentála na pastvině u&nbsp;Dolního Václavova při západu slunce" width="1000" height="750" loading="lazy" decoding="async">
+    <figure class="photo-band" aria-label="Pastvina u&nbsp;Dolního Václavova">
+      <div class="photo-band__media">
+        <img class="photo-band__img" src="img/krava-zapad-slunce@2x.webp" srcset="img/krava-zapad-slunce.webp 1000w, img/krava-zapad-slunce@2x.webp 2400w" sizes="100vw" alt="Kráva masného simentála na pastvině u&nbsp;Dolního Václavova při západu slunce" width="1000" height="750" loading="lazy" decoding="async">
+      </div>
     </figure>
 
     <section id="kontakt" class="section kontakt">
@@ -331,15 +333,38 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-container">
-      <svg class="footer-logo" role="img" aria-label="Farma Dolní Václavov"><use href="#logo-full"></use></svg>
-      <div class="footer-text">
-        <p class="footer-info">
-          <span class="footer-line">Ing. Štěpánka Jurinová</span><span class="footer-sep">, </span>
-          <span class="footer-line">Dolní Václavov 65, 792 01 Václavov u&nbsp;Bruntálu</span><span class="footer-sep">, </span>
-          <span class="footer-line">IČO 01864203</span>
-        </p>
-        <p class="footer-copyright">© <span id="current-year">2026</span> Farma Dolní Václavov</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="footer-brand__link" aria-label="Farma Dolní Václavov, zpět nahoru">
+            <svg class="footer-logo" aria-hidden="true" focusable="false"><use href="#logo-full"></use></svg>
+          </a>
+          <p class="footer-brand__text">Rodinná farma v&nbsp;podhůří Jeseníků. Ekologické zemědělství od roku 2015.</p>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-col__title">Kontakt</h2>
+          <ul class="footer-list">
+            <li><a href="tel:+420724273266">724 273 266</a></li>
+            <li><a href="mailto:s.sajnarova@seznam.cz">s.sajnarova@seznam.cz</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2 class="footer-col__title">Adresa</h2>
+          <address class="footer-address">Ing. Štěpánka Jurinová<br>Dolní Václavov 65<br>792 01 Václavov u&nbsp;Bruntálu<br>IČO 01864203</address>
+        </div>
+        <nav class="footer-col" aria-label="Navigace v&nbsp;patičce">
+          <h2 class="footer-col__title">Farma</h2>
+          <ul class="footer-list">
+            <li><a href="#o-farme">O&nbsp;farmě</a></li>
+            <li><a href="#chov">Chov skotu</a></li>
+            <li><a href="#rostlinna-vyroba">Rostlinná výroba</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="current-year">2026</span> Farma Dolní Václavov</p>
+        <p>Mapové podklady © OpenStreetMap</p>
       </div>
     </div>
   </footer>
