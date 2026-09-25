@@ -9,6 +9,7 @@
   --straw: #D8C08C;
   --rust: #9B4F2C;
   --rust-hover: #83411F;
+  --logo-green: #2F482A;
   --white: #FFFFFF;
   --shadow-card: 0 1px 2px rgba(31, 42, 28, 0.06), 0 14px 36px -14px rgba(31, 42, 28, 0.22);
   --radius-sm: 6px;
@@ -278,10 +279,42 @@ button,
 
 .wordmark {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
   color: inherit;
   line-height: 1.15;
+}
+
+.wordmark__text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Znak z loga (hory, kráva, klas), barva přes currentColor */
+.wordmark__emblem {
+  flex: none;
+  width: 64px;
+  height: 40px;
+  fill: currentColor;
+  color: var(--white);
+  transition: color 160ms var(--ease);
+}
+
+.site-header.is-solid .wordmark__emblem,
+.site-header.is-menu-open .wordmark__emblem {
+  color: var(--logo-green);
+}
+
+@media (max-width: 640px) {
+  .wordmark {
+    gap: 10px;
+  }
+
+  .wordmark__emblem {
+    width: 54px;
+    height: 34px;
+  }
 }
 
 .wordmark:hover {
@@ -904,14 +937,14 @@ html:not(.js) .nav-contact {
 }
 
 .chov__figure {
-  grid-column: 1 / 6;
+  grid-column: 1 / 7;
   margin: 0;
 }
 
 .chov__figure img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  max-height: 640px;
+  aspect-ratio: 4 / 3;
+  object-position: 30% 50%;
   object-fit: cover;
   border-radius: var(--radius-md);
   display: block;
@@ -937,6 +970,26 @@ html:not(.js) .nav-contact {
   .chov__content {
     order: 1;
     width: 100%;
+  }
+}
+
+/* Fotografický pás mezi Rostlinnou výrobou a Kontaktem */
+.photo-band {
+  margin: 0;
+}
+
+.photo-band img {
+  display: block;
+  width: 100%;
+  height: clamp(360px, 58vw, 820px);
+  object-fit: cover;
+  object-position: 50% 95%;
+}
+
+@media (max-width: 640px) {
+  .photo-band img {
+    height: auto;
+    aspect-ratio: 4 / 5;
   }
 }
 
@@ -1059,7 +1112,7 @@ html:not(.js) .nav-contact {
 /* Activities tile grid */
 .tile-grid--activities {
   margin-top: 48px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 @media (max-width: 900px) {
@@ -1105,6 +1158,11 @@ html:not(.js) .nav-contact {
   .tile-grid--activities {
     margin-top: 40px;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Lichá poslední dlaždice přes celou šířku */
+  .tile-grid--activities > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 }
 
@@ -1530,6 +1588,21 @@ html:not(.js) .nav-contact {
 
 .footer-container {
   display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.footer-logo {
+  flex: none;
+  width: 176px;
+  height: 140px;
+  fill: currentColor;
+  color: var(--surface);
+}
+
+.footer-text {
+  flex: 1;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -1558,6 +1631,17 @@ html:not(.js) .nav-contact {
   }
 
   .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footer-logo {
+    width: 148px;
+    height: 118px;
+  }
+
+  .footer-text {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
