@@ -5,3 +5,5 @@ temporary screenshots
 serve.mjs
 screenshot.mjs
 AGENTS.md
+.env*
+.vercel
