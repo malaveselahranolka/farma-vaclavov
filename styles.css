@@ -975,7 +975,7 @@ html:not(.js) .nav-contact {
 
 /* Fotka se zelenou září kolem a zeleným dozníváním na okrajích (parallax) */
 .photo-frame {
-  margin: 56px 0 0;
+  margin: 72px 0 0;
   border-radius: var(--radius-md);
   box-shadow:
     0 0 0 1px rgba(47, 72, 42, 0.35),
@@ -1028,24 +1028,14 @@ html:not(.js) .nav-contact {
   }
 }
 
-/* Menší mezera mezi fotkou a Kontaktem */
-.section.rostlinna-vyroba {
-  padding-bottom: 0;
-}
-
+/* Fotka na konci Kontaktu, těsně před patičkou */
 .section.kontakt {
-  padding-top: 96px;
-}
-
-@media (max-width: 900px) {
-  .section.kontakt {
-    padding-top: 72px;
-  }
+  padding-bottom: 80px;
 }
 
 @media (max-width: 640px) {
   .section.kontakt {
-    padding-top: 56px;
+    padding-bottom: 48px;
   }
 }
 
